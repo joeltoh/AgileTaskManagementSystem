@@ -178,6 +178,9 @@ export const Permissions = {
 }
 ```
 
+# Disclaimer
+This project was done for a school project and for education purposes only and is no longer being maintained. This repository is just used to archive the projects done for school. 
+
 # Project Team Members
 
 * Joel, Vince, Jefferson, Desmond, Chao Jian, Brandon
