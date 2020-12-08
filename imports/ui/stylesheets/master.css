@@ -1,0 +1,54 @@
+body {
+  font-family: "Open Sans", sans-serif
+}
+
+.page-bar .page-breadcrumb li a,
+.page-bar .page-breadcrumb li span {
+  font-size: 2vw;
+}
+
+.scroller {
+  overflow-y: auto;
+}
+
+.logo {
+  font-size: 20px;
+  color: white;
+  margin: 15px 0 15px 0;
+}
+
+.page-sidebar {
+  margin-top: 50px;
+}
+
+.page-footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: #2b3643;
+}
+
+.page-header.navbar .page-logo .logo-default {
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 0px;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .page-content-wrapper .page-content {
+    margin-top: 50px;
+    margin-left: 235px;
+    min-height: 90vh;
+  }
+}
+
+div.form-group {
+  margin: 0;
+  padding: 10px;
+}
+
+.bs-select {
+  background-color: white;
+}

@@ -1,0 +1,27 @@
+<template name='dashboard'>
+  <div class='page-content'>
+    <h1>Dashboard</h1>
+    <div class="row">
+      {{#each dashboardStat}} {{> statCard}} {{/each}}
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="dashboard-stat2 ">
+          <div class="display">
+            <div class="progress-info">
+              <div class="status">
+                <div class="status-title">progress</div>
+              </div>
+              <div class="progress">
+                {{#each dashboardStat}}
+                <span style="width: {{progress}}%;" class="progress-bar progress-bar-success {{status}}"></span>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> taskTable progress=1 for='team'}} {{> taskTable progress=0 for='team'}} {{> taskTable progress=2 for='team'}}
+  </div>
+</template>

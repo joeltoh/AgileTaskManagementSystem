@@ -1,0 +1,11 @@
+<!-- 
+  Author: Vince Dang
+  Define the sidebar section containing a header and a list of sub-sidebar menu.
+ -->
+
+<template name='sidebarSection'>
+  <li class="heading">
+    <h3 class="uppercase">{{sidebarHeader}}</h3>
+  </li>
+  {{#each sidebarItems}} {{> sidebarItem}} {{/each}}
+</template>

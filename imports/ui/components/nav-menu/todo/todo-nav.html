@@ -1,0 +1,26 @@
+<!-- 
+  Author: Vince Dang
+  Define the todo navbar component of the navigation bar from master layout
+ -->
+
+<template name='todoNav'>
+  <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
+    <a href="/" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+      <i class="fa fa-calendar"></i>
+      <span class="badge badge-default"> {{todoCount}} </span>
+    </a>
+    <ul class="dropdown-menu extended tasks">
+      <li class="external">
+        <h3>You have
+          <span class="bold">{{todoCount}} ongoing</span> tasks</h3>
+        <a href="app_todo.html">view all</a>
+      </li>
+      <li>
+        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+          {{#each todos}} {{> todoItem}} {{/each}}
+
+        </ul>
+      </li>
+    </ul>
+  </li>
+</template>

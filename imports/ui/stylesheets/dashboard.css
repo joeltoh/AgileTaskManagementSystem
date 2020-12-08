@@ -1,0 +1,21 @@
+.page-content .row div .dashboard-stat2 .display {
+  margin: 0;
+}
+
+.page-content .row div .dashboard-stat2 {
+  margin: 0;
+  padding: 15px;
+}
+
+.page-content .row div .dashboard-stat2 .display .progress-info .status .status-title {
+  padding: 10px;
+  font-size: 25px;
+}
+
+.page-content .row div .dashboard-stat2 .display .progress-info .progress {
+  height: 15px;
+}
+
+.dashboard-stat2 .display .number h3 {
+  font-size: 70px;
+}

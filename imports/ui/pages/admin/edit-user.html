@@ -1,0 +1,124 @@
+<template name='edituserList'>
+  <div class='page-content'>
+    <div class="portlet light bg-inverse form-fit">
+      <div class="portlet-title">
+          <div class="caption">
+              <i class="icon-equalizer font-green-haze"></i>
+              <span class="caption-subject font-green-haze bold uppercase">User Creation Page</span>
+              <span class="caption-helper">Please input the details of the user</span>
+          </div>
+          <div class="actions">
+              <div class="portlet-input input-inline input-small">
+                  <div class="input-icon right">
+                      <i class="icon-magnifier"></i>
+                      <input type="text" class="form-control input-circle" placeholder="search..."> </div>
+              </div>
+          </div>
+      </div>
+      <div class="portlet-body form">
+          <!-- BEGIN FORM-->
+          <form action="#" class="form-horizontal form-row-seperated" id='cu-form'>
+              <div class="form-body">
+                  <div class="form-group">
+                      <label class="control-label col-md-3">Full Name</label>
+                      <div class="col-md-9">
+                          <input type="text" placeholder="small" class="form-control" id='name'/>
+                          <span class="help-block">Please input user's name</span>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-md-3">Email</label>
+                      <div class="col-md-9">
+                          <input type="text" placeholder="medium" class="form-control" id='email'/>
+                          <span class="help-block">Please input user's email</span>
+                          <div class="alert alert-danger {{#unless emailError}}display-hide{{/unless}}">
+                            <strong>Error!</strong>
+                            {{ emailError }}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-md-3">Role</label>
+                      <div class="col-md-9">
+                          <select class="form-control" id='role'>
+                              <option value=""></option>
+                              <option value="admin">Admin</option>
+                              <option value="coordinator">Course Coordinator</option>
+                              <option value="teamLeader">Team Leader</option>
+                              <option value="teamMember">Team Member</option>
+                          </select>
+                          <span class="help-block">Select user's role.</span>
+                      </div>
+                  </div>
+                  {{#if isTeamLeaderMember}}
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Course</label>
+                    <div class="col-md-9">
+                      <select class="form-control courses">
+                        <option value=""></option>
+                        {{#each displayCourses}}
+                          <option value="{{course_value}}">{{course_name}}</option>
+                        {{/each}}
+                      </select>
+                      <span class="help-block">Select user's course.</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Group</label>
+                    <div class="col-md-9">
+                        <select class="form-control" id='group'>
+                            <option value=""></option>
+                            {{#each displayGroups}}
+                              <option value="{{group_value}}">{{group_name}}</option>
+                            {{/each}}
+                        </select>
+                        <span class="help-block">Select user's group.</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-3">Team</label>
+                    <div class="col-md-9">
+                        <select class="form-control" id='team'>
+                          {{#each displayTeams}}
+                            <option value="{{team_value}}">{{team_name}}</option>
+                          {{/each}}
+                        </select>
+                        <span class="help-block">Select user's team.</span>
+                    </div>
+                  </div>
+                  {{/if}}
+                  {{#if isCoordinator}}
+                  <div class="form-group">
+                      <label class="control-label col-md-3">Course</label>
+                      <div class="col-md-9">
+                          <select class="form-control courses">
+                            <option value=""></option>
+                            {{#each displayCourses}}
+                              <option value="{{course_value}}">{{course_name}}</option>
+                            {{/each}}
+                          </select>
+                          <span class="help-block">Select user's course.</span>
+                      </div>
+                  </div>
+                  {{/if}}
+              </div>
+              <div class="form-actions">
+                  <div class="row">
+                      <div class="col-md-offset-3 col-md-9">
+                          <button type="submit" class="btn green" id='cu-submit'>
+                              <i class="fa fa-pencil"></i>Create User</button>
+                          <button type="button" class="btn default">Cancel</button>
+                      </div>
+                  </div>
+                  {{#if userCreated}}
+                  <div>
+                    {{ userCreatedModal }}
+                  </div>
+                  {{/if}}
+              </div>
+          </form>
+          <!-- END FORM-->
+      </div>
+      </div>
+  </div>
+</template>

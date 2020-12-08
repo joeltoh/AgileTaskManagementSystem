@@ -1,0 +1,13 @@
+<template name='courseNav'>
+  <li class="dropdown">
+    <form id="course-selector">
+      <div class="form-group">
+        <select class="bs-select form-control">
+          {{#each teamInfos}}
+          <option value='{{teamId}}'>{{courseCode}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </form>
+  </li>
+</template>

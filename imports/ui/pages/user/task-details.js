@@ -1,0 +1,1 @@
+import './task-details.html'

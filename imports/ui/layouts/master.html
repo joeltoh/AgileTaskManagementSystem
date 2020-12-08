@@ -1,0 +1,27 @@
+<!-- 
+  Author: Vince Dang
+  Define the master layout of the web application.
+  Possible places for replacement are the embedded templates.
+ -->
+
+
+<template name='master'>
+
+  <div class="page-header navbar navbar-fixed-top">
+    <div class="page-header-inner ">
+      {{> navLogo}}
+      <a href="/" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a> {{>
+      navMenu}}
+    </div>
+  </div>
+
+  <div class="clearfix"> </div>
+  <div class="page-container">
+    {{> sidebar}}
+    <div class="page-content-wrapper">
+      {{> Template.dynamic template=content}}
+    </div>
+
+  </div>
+  {{> footer}}
+</template>

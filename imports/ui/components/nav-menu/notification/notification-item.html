@@ -1,0 +1,18 @@
+<!-- 
+  Author: Vince Dang
+  Define the notification item component of the notification navbar.
+ -->
+
+<template name='notificationItem'>
+  <li>
+    <a href="{{link}}">
+      <span class="time">{{time}}</span>
+      <span class="details">
+        {{#with category}}
+          {{> notificationCat}}
+        {{/with}}
+      </span>
+      {{title}}
+    </a>
+  </li>
+</template>
