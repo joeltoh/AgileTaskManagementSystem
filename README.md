@@ -88,7 +88,7 @@
 - `.gitignore` lists the files or directories that are excluded from syncing with git (currently we're excluding `node_modules/` folders since it's filled with `npm` packages which are redundant to store on GitHub)
 - `package.json` describes the project as a node module, with all the dependencies as stored in `node_modules/` (to install these dependencies, simply type `npm install` in either the *Terminal (Mac)* or *PowerShell (Wins)*)
 
-## [Permission]
+## Permission
 
 - **NOTES**:
   - an user has permission to do certain actions doesn't mean that he/she can do so globally, but rather *subjected to further filtering by their userIds*
