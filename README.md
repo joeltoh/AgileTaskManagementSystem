@@ -52,7 +52,6 @@
   - Use **dash-seperated** for HTML attributes and CSS classes as usual e.g. `nav nav-bar`, `.container`
   - Use **camel case** for template names and variable names e.g. `template name='userNav'`, `notificationItem`
   - Use **upper-camel case** for modular utility functions and constants e.g. `export const UserMenu`
--
 
 ## Application Routes
 
